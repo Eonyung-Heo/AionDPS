@@ -6957,7 +6957,622 @@
   </skill>
   <skill>
     <id>300000</id>
+    <name>단 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300001</id>
+    <name>단 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300002</id>
+    <name>단 III</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300003</id>
+    <name>단 IV</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300004</id>
     <name>단 V</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300005</id>
+    <name>공 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300006</id>
+    <name>공 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300007</id>
+    <name>공 III</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300008</id>
+    <name>공 IV</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300009</id>
+    <name>공 V</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300010</id>
+    <name>참 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300011</id>
+    <name>참 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300012</id>
+    <name>참 III</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300013</id>
+    <name>참 IV</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300014</id>
+    <name>참 V</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300015</id>
+    <name>집행의 사슬 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300016</id>
+    <name>전류 갑주 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300017</id>
+    <name>운명의 집행자 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300018</id>
+    <name>운명의 집행자 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300019</id>
+    <name>운명의 집행자 III</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300020</id>
+    <name>사자후 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300021</id>
+    <name>사자후 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300022</id>
+    <name>사자후 III</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300023</id>
+    <name>사자후 IV</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300024</id>
+    <name>뇌격 돌진 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300025</id>
+    <name>뇌격 돌진 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300026</id>
+    <name>뇌격 돌진 III</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300027</id>
+    <name>사자 포효 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300028</id>
+    <name>사자 포효 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300029</id>
+    <name>사자 포효 III</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300030</id>
+    <name>사자 포효 VI</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300031</id>
+    <name>사자 포효 V</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300032</id>
+    <name>뇌전 폭발 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300033</id>
+    <name>뇌전 폭발 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300034</id>
+    <name>뇌전 폭발 III</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300035</id>
+    <name>뇌전 폭발 IV</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300036</id>
+    <name>뇌전 폭발 V</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300037</id>
+    <name>뇌력 집중 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300038</id>
+    <name>갈라지는 번개 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300039</id>
+    <name>갈라지는 번개 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300040</id>
+    <name>전뢰 강타 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300041</id>
+    <name>전뢰타 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300042</id>
+    <name>전뢰타 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300043</id>
+    <name>전류 파동 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300044</id>
+    <name>전류 파동 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300045</id>
+    <name>전류 파동 III</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300046</id>
+    <name>섬광의 일격 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300047</id>
+    <name>섬광의 일격 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300048</id>
+    <name>폭렬 강타 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300049</id>
+    <name>폭렬 강타 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300050</id>
+    <name>폭렬 강타 III</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300051</id>
+    <name>전류 낙하 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300052</id>
+    <name>전류 낙하 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300053</id>
+    <name>전류 낙하 III</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300054</id>
+    <name>폭뢰타 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300055</id>
+    <name>폭뢰타 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300056</id>
+    <name>폭뢰타 III</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300057</id>
+    <name>폭뢰타 IV</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300058</id>
+    <name>폭뢰타 V</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300059</id>
+    <name>뇌전 대폭발 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300060</id>
+    <name>뇌전 대폭발 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300061</id>
+    <name>뇌전 대폭발 III</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300062</id>
+    <name>전류 회귀 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300063</id>
+    <name>쇄 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300064</id>
+    <name>쇄 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300065</id>
+    <name>쇄 III</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300066</id>
+    <name>쇄 IV</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300067</id>
+    <name>쇄 V</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300068</id>
+    <name>하늘의 심판 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300069</id>
+    <name>하늘의 심판 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300070</id>
+    <name>하늘의 심판 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300071</id>
+    <name>충전 타격 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300072</id>
+    <name>충전 타격 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300073</id>
+    <name>타 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300074</id>
+    <name>타 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300075</id>
+    <name>타 III</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300076</id>
+    <name>타 IV</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300077</id>
+    <name>타 V</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300078</id>
+    <name>뇌 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300079</id>
+    <name>뇌 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300080</id>
+    <name>뇌 III</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300081</id>
+    <name>뇌 IV</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300082</id>
+    <name>뇌 V</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300083</id>
+    <name>격 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300084</id>
+    <name>격 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300085</id>
+    <name>격 III</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300086</id>
+    <name>격 IV</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300087</id>
+    <name>격 V</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300088</id>
+    <name>반격타 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300089</id>
+    <name>반격타 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300090</id>
+    <name>반격타 III</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300091</id>
+    <name>반격타 IV</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300092</id>
+    <name>반격타 V</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300093</id>
+    <name>뇌전 회복 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300094</id>
+    <name>천둥 일격 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300095</id>
+    <name>천둥 일격 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300096</id>
+    <name>천둥 일격 III</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300097</id>
+    <name>충전 베기 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300098</id>
+    <name>절전 모드 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300099</id>
+    <name>회복의 번개 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300100</id>
+    <name>뇌전 파동 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300101</id>
+    <name>뇌전 파동 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300102</id>
+    <name>뇌전 파동 III</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300103</id>
+    <name>뇌전 폭풍 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300104</id>
+    <name>뇌전 폭풍 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300105</id>
+    <name>뇌전 폭풍 III</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300106</id>
+    <name>충전 일격 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300107</id>
+    <name>천뢰타 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300108</id>
+    <name>전류 충전 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300109</id>
+    <name>전류 증폭 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300110</id>
+    <name>전류 갑옷 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300111</id>
+    <name>전류 갑주 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300112</id>
+    <name>자기장 방출 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300113</id>
+    <name>울부짖는 벼락 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300114</id>
+    <name>번개 보호막 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300115</id>
+    <name>번개의 발걸음 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300116</id>
+    <name>무력타 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300117</id>
+    <name>무력타 II</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300118</id>
+    <name>무력타 III</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300119</id>
+    <name>무력타 IV</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300120</id>
+    <name>무력타 V</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300121</id>
+    <name>뇌정의 깨달음 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300122</id>
+    <name>뇌력 충전 I</name>
+    <class>집행자</class>
+  </skill>
+  <skill>
+    <id>300123</id>
+    <name>뇌력 집중 I</name>
     <class>집행자</class>
   </skill>
 </skills>

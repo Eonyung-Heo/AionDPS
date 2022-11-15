@@ -107,12 +107,20 @@ namespace AionDPS
 
                     this.button1.Text = "집계완료.";
 
+
                 }
+
                 resultForm.Show();
                 this.Hide();
+
             }
             catch (Exception ex)
             {
+                this.button1.BackColor = Color.FromName("ActiveCaption");
+
+                this.button1.Text = "집계.";
+                this.button1.Enabled = true;
+
                 Console.WriteLine(ex);
                 Console.WriteLine(log2);
             }

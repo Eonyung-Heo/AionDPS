@@ -23,6 +23,8 @@ namespace AionDPS
             InitializeComponent();
 
             LogAnalyzer.Initialize();
+
+
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -34,6 +36,9 @@ namespace AionDPS
             form = this;
 
             getSettings();
+
+            checkBox2.Checked = true;
+            checkBox3.Checked = true;
         }
 
         private void fortressComboBox_SelectedIndexChanged(object sender, EventArgs e)

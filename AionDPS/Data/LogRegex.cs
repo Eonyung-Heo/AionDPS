@@ -74,7 +74,7 @@ namespace AionDPS
                 return analyzed;
             }
             
-            if (rx.IsMatch(log))
+            else if (rx.IsMatch(log))
             {
                 Match matched = rx.Match(log);
 

@@ -243,7 +243,10 @@ namespace AionDPS
             dataGridView1.Height = DGVOriginalHeight;
         }
 
-
+        private void ResultForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
     public static class ExtensionMethods
     {

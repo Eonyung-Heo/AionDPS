@@ -36,6 +36,11 @@ namespace AionDPS
             string userName = logResult.userName;
             string skillName = logResult.skillName;
 
+            string test;
+
+            if (userName == "포스")
+                test = userName;
+
             if (userName == null || userName == "") return;
             else if (userName.IndexOf("의 정령") != -1 || userName.IndexOf("의 기운") != -1)
                 return;

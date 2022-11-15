@@ -105,7 +105,6 @@ namespace AionDPS
 
                     }
 
-                    this.button1.Text = "집계완료.";
 
 
                 }
@@ -118,7 +117,7 @@ namespace AionDPS
             {
                 this.button1.BackColor = Color.FromName("ActiveCaption");
 
-                this.button1.Text = "집계.";
+                this.button1.Text = "집 계";
                 this.button1.Enabled = true;
 
                 Console.WriteLine(ex);

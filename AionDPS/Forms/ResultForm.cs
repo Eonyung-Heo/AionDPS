@@ -133,6 +133,7 @@ namespace AionDPS
             dataGridView1.Columns[19].Width = 0;
 
             this.Width = dataGridView1.Columns.GetColumnsWidth(DataGridViewElementStates.Visible) + 50;
+            this.Height = 1000;
 
             dataGridView1.CurrentCell = null;
         }
@@ -164,6 +165,7 @@ namespace AionDPS
                 else
                 {
                     this.Width = dataGridView1.Columns.GetColumnsWidth(DataGridViewElementStates.Visible) + 50;
+                    this.Height = 1000;
 
                     dataGridView1.CurrentCell = null;
 
@@ -243,10 +245,6 @@ namespace AionDPS
             dataGridView1.Height = DGVOriginalHeight;
         }
 
-        private void ResultForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
     }
     public static class ExtensionMethods
     {

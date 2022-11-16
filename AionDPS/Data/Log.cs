@@ -35,6 +35,7 @@ namespace AionDPS
         public int castSpeedCount = 0;
         public bool rage = false;
         public int rageDamage = 0;
+        public string transform = "N";
 
         public DateTime lastLoggedTime;
 

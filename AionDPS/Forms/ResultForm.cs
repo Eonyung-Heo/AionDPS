@@ -39,6 +39,7 @@ namespace AionDPS
             data.Columns.Add("평타비율", typeof(string));
             data.Columns.Add("스킬비율", typeof(string));
             data.Columns.Add("신속", typeof(string));
+            data.Columns.Add("신장변신", typeof(string));
             data.Columns.Add("격노", typeof(bool));
 
             checkBox1.Checked = true;
@@ -105,6 +106,7 @@ namespace AionDPS
                     item.Value.atkPercentage + "%",
                     item.Value.skillPercentage + "%",
                     item.Value.castSpeedCount + "회",
+                    item.Value.transform,
                     item.Value.rage
                 );
             }
@@ -130,7 +132,8 @@ namespace AionDPS
             dataGridView1.Columns[16].Width = 80;
             dataGridView1.Columns[17].Width = 80;
             dataGridView1.Columns[18].Width = 80;
-            dataGridView1.Columns[19].Width = 0;
+            dataGridView1.Columns[19].Width = 80;
+            dataGridView1.Columns[20].Width = 0;
 
             this.Width = dataGridView1.Columns.GetColumnsWidth(DataGridViewElementStates.Visible) + 50;
             this.Height = 1000;
@@ -150,7 +153,7 @@ namespace AionDPS
 
         private void button_Click(object sender, EventArgs e)
         {
-            int i = 0;
+            int i = 1;
 
             Button btn = (Button)sender;
             currViewClass = btn.Text;
@@ -177,9 +180,9 @@ namespace AionDPS
                         if (Main.form.showMyNick.Checked)
                             if (row.Cells[2].Value.ToString() == Main.form.textBox1.Text)
                                 row.DefaultCellStyle.BackColor = Color.Yellow;
-                        if ((bool)row.Cells[19].Value)
+                        if ((bool)row.Cells[20].Value)
                             row.DefaultCellStyle.BackColor = Color.LightPink;
-                        row.Cells[0].Value = ++i;
+                        row.Cells[0].Value = i++;
                     }
                 }
 

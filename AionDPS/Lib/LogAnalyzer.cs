@@ -92,6 +92,9 @@ namespace AionDPS
                 return;
             }
 
+
+            
+
             if (userName.IndexOf(' ') != -1 && skillName.IndexOf(userName) != -1)
                 return;
             else if (userName == "빙판" && skillName.StartsWith("빙판") && skillName.EndsWith("효과"))
@@ -114,6 +117,14 @@ namespace AionDPS
                 if (logResult.skillName != null && userLog.userClass == "")
                     userLog.userClass = getUserClass(userLog, logResult);
 
+                if (userLog.transform == "N" && logResult.transform == "Y")
+                    userLog.transform = "Y";
+                else if(userLog.transform == "Y" && logResult.transform == "N")
+                    userLog.transform = "Y";
+                else if (userLog.transform == "Y" && logResult.transform == "Y")
+                    userLog.transform = "Y";
+                else
+                    userLog.transform = "N";
 
                 userLog.skillCriticalPercentage = userLog.skillTimes != 0 ? Convert.ToInt32((float)userLog.skillCriticalTimes / (float)userLog.skillTimes * 100) : 0;
                 userLog.avgAtkDamage = userLog.atkTimes != 0 ? Convert.ToInt32(userLog.atkAccDamage / userLog.atkTimes) : 0;
@@ -129,6 +140,8 @@ namespace AionDPS
 
                 if (!userLog.usedSkills.ContainsKey(skillName))
                     userLog.usedSkills.Add(skillName, new Log.UsedSkill());
+
+                
 
                 userLog.usedSkills[skillName].log.Add(logStr);
                 userLog.usedSkills[skillName].logDamage.Add(logResult.damage);

@@ -153,10 +153,13 @@ namespace AionDPS
 
         private void button_Click(object sender, EventArgs e)
         {
-            int i = 1;
+            int i = 0;
 
             Button btn = (Button)sender;
             currViewClass = btn.Text;
+
+            
+
             
             Thread thread = new Thread(new ThreadStart(delegate () {
 
@@ -176,13 +179,23 @@ namespace AionDPS
                     data.DefaultView.Sort = "누적딜 DESC";
                     foreach (DataGridViewRow row in dataGridView1.Rows)
                     {
-                        
+                        /*
+                        if(i == 1 || i % 2 != 0)
+                            row.DefaultCellStyle.BackColor = Color.WhiteSmoke;
+                        */
+                        if (dataGridView1.Rows.Count > i)
+                        {
+                            row.Cells[0].Value = ++i;
+                        }
+
                         if (Main.form.showMyNick.Checked)
                             if (row.Cells[2].Value.ToString() == Main.form.textBox1.Text)
                                 row.DefaultCellStyle.BackColor = Color.Yellow;
                         if ((bool)row.Cells[20].Value)
                             row.DefaultCellStyle.BackColor = Color.LightPink;
-                        row.Cells[0].Value = i++;
+
+
+
                     }
                 }
 

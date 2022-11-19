@@ -43,6 +43,7 @@ namespace AionDPS
             data.Columns.Add("격노", typeof(bool));
 
             checkBox1.Checked = true;
+            dataGridView1.CurrentCell = null;
         }
         private void DataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs anError)
         {
@@ -139,6 +140,7 @@ namespace AionDPS
             this.Height = 1000;
 
             dataGridView1.CurrentCell = null;
+
         }
 
         private void dataGridView1_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -153,20 +155,23 @@ namespace AionDPS
 
         private void button_Click(object sender, EventArgs e)
         {
+            dataGridView1.CurrentCell = null;
+
             int i = 0;
 
             Button btn = (Button)sender;
             currViewClass = btn.Text;
 
-            
 
-            
-            Thread thread = new Thread(new ThreadStart(delegate () {
+            Thread thread = new Thread(new ThreadStart(delegate ()
+            {
 
                 if (btn.Text == "전체")
                 {
                     data.DefaultView.RowFilter = $"";
                     data.DefaultView.Sort = "#";
+
+                    dataGridView1.CurrentCell = null;
                 }
                 else
                 {
@@ -179,10 +184,10 @@ namespace AionDPS
                     data.DefaultView.Sort = "누적딜 DESC";
                     foreach (DataGridViewRow row in dataGridView1.Rows)
                     {
-                        /*
-                        if(i == 1 || i % 2 != 0)
+
+                        if (i == 1 || i % 2 != 0)
                             row.DefaultCellStyle.BackColor = Color.WhiteSmoke;
-                        */
+
                         if (dataGridView1.Rows.Count > i)
                         {
                             row.Cells[0].Value = ++i;
@@ -194,21 +199,20 @@ namespace AionDPS
                         if ((bool)row.Cells[20].Value)
                             row.DefaultCellStyle.BackColor = Color.LightPink;
 
-
-
                     }
                 }
 
                 dataGridView1.ClearSelection();
-                
+
                 if (checkBox1.Checked && btn.Text != "전체")
                 {
                     Capture();
                 }
             }));
 
-            if(data.Rows.Count > 0)
+            if (data.Rows.Count > 0)
                 thread.Start();
+            
 
         }
 
@@ -220,6 +224,8 @@ namespace AionDPS
 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            dataGridView1.ClearSelection();
+            /*
             if (e.ColumnIndex != -1 && e.RowIndex != -1 && e.Button == MouseButtons.Right)
             {
                 DataGridViewCell c = (sender as DataGridView)[e.ColumnIndex, e.RowIndex];
@@ -229,9 +235,9 @@ namespace AionDPS
                     c.DataGridView.CurrentCell = c;
                     c.Selected = true;
                 }
-
+                
                 //contextMenuStrip1.Show();
-            }
+            }*/
         }
         /*
         private void 검색ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -261,6 +267,15 @@ namespace AionDPS
             dataGridView1.Height = DGVOriginalHeight;
         }
 
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1.CurrentCell = null;
+        }
+
+        private void dataGridView1_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1.CurrentCell = null;
+        }
     }
     public static class ExtensionMethods
     {

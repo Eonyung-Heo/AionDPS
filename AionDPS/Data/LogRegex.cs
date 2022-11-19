@@ -60,8 +60,8 @@ namespace AionDPS
                     targetName = log.Contains("사용한") ? Main.form.textBox1.Text : "";
                 }
 
-                if ((Main.form.fortressComboBox.Text == "어비스 상층" && loggedHour == 19) ||
-                    (Main.form.fortressComboBox.Text != "어비스 상층" && loggedHour == 22))
+                if ((Main.form.fortressComboBox.Text == "어비스" && loggedHour == 19) ||
+                    (Main.form.fortressComboBox.Text != "어비스" && loggedHour == 22))
                 {
                     analyzed.userName = userName;
                     analyzed.hittedObjectName = targetName;

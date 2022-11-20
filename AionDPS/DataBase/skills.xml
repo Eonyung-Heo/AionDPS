@@ -1138,7 +1138,7 @@
   <skill>
     <id>282729</id>
     <name>대지의 응보 I</name>
-    <class>사제</class>
+    <class></class>
   </skill>
   <skill>
     <id>282741</id>
@@ -1933,7 +1933,7 @@
   <skill>
     <id>283464</id>
     <name>바람의 약속 I</name>
-    <class>사제</class>
+    <class></class>
   </skill>
   <skill>
     <id>284048</id>
@@ -2488,7 +2488,7 @@
   <skill>
     <id>282001</id>
     <name>보호의 축복 I</name>
-    <class>사제</class>
+    <class></class>
   </skill>
   <skill>
     <id>293584</id>
@@ -2553,7 +2553,7 @@
   <skill>
     <id>282009</id>
     <name>부활의 빛 I</name>
-    <class>사제</class>
+    <class></class>
   </skill>
   <skill>
     <id>286068</id>
@@ -3068,7 +3068,7 @@
   <skill>
     <id>283460</id>
     <name>생명의 축복 I</name>
-    <class>사제</class>
+    <class></class>
   </skill>
   <skill>
     <id>284232</id>
@@ -3138,7 +3138,7 @@
   <skill>
     <id>283462</id>
     <name>소생의 빛 I</name>
-    <class>사제</class>
+    <class></class>
   </skill>
   <skill>
     <id>291263</id>
@@ -5668,7 +5668,7 @@
   <skill>
     <id>282695</id>
     <name>천벌 I</name>
-    <class>사제</class>
+    <class></class>
   </skill>
   <skill>
     <id>282743</id>
@@ -5853,7 +5853,7 @@
   <skill>
     <id>282005</id>
     <name>치유의 빛 I</name>
-    <class>사제</class>
+    <class></class>
   </skill>
   <skill>
     <id>282345</id>

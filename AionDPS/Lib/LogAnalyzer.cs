@@ -54,6 +54,13 @@ namespace AionDPS
                 else
                     userName = logResult.userName;
             }
+            if (logResult.isAttackSpd)
+            {
+                if (logResult.hittedObjectName != "")
+                    userName = logResult.hittedObjectName;
+                else
+                    userName = logResult.userName;
+            }
 
             if (!userList.ContainsKey(userName))
             {
@@ -70,6 +77,21 @@ namespace AionDPS
                 userLog.lastLog = logResult;
                 return;
             }
+            if (logResult.isAttackSpd)
+            {
+                userLog.attackSpeedCount++;
+                userList[userName] = userLog;
+                userLog.lastLog = logResult;
+                return;
+            }
+            if (logResult.damage <= 1 && logResult.transform == "Y")
+            {
+                userLog.transform = "Y";
+                userList[userName] = userLog;
+                userLog.lastLog = logResult;
+                return;
+            }
+
             if (logResult.isCritical)
             {
 

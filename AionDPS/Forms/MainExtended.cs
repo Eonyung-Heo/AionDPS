@@ -28,6 +28,7 @@ namespace AionDPS
             this.checkBox2.Checked = Properties.Settings.Default.showRapidCast;
             this.checkBox3.Checked = Properties.Settings.Default.showRage;
             this.textBox1.Text = Properties.Settings.Default.userName;
+            this.serverComboBox.SelectedIndex = Properties.Settings.Default.server;
 
         }
 
@@ -38,6 +39,7 @@ namespace AionDPS
             Properties.Settings.Default.showRapidCast = this.checkBox2.Checked;
             Properties.Settings.Default.showRage = this.checkBox3.Checked;
             Properties.Settings.Default.userName = this.textBox1.Text == "<당신>" ? "" : this.textBox1.Text;
+            Properties.Settings.Default.server = this.serverComboBox.SelectedIndex;
 
             Properties.Settings.Default.Save();
         }

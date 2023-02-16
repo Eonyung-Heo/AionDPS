@@ -34,6 +34,7 @@ namespace AionDPS
         public int totalDealCount = 0;
         public int castSpeedCount = 0;
         public int attackSpeedCount = 0;
+        public int spiritWallCount = 0;
         public bool rage = false;
         public int rageDamage = 0;
         public string transform = "N";

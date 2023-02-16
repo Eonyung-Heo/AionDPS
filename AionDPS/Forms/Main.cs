@@ -70,9 +70,15 @@ namespace AionDPS
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (serverComboBox.Text == "")
+            {
+                MessageBox.Show("아이온 서버 선택 해주세요");
+                return;
+            }
 
             if (guardianComboBox.Text == "")
             {
+                MessageBox.Show("수호신장을 선택해 주세요");
                 return;
             }
             if (textBox1.Text == "")
@@ -101,6 +107,8 @@ namespace AionDPS
                     while ((log = sr.ReadLine()) != null)
                     {
                         log2 = log;
+                        if (log2 == "")
+                            continue;
                         LogAnalyzer.Instance.Analyze(log, guardianComboBox.Text);
 
                     }

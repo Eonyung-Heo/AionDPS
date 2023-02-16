@@ -61,6 +61,13 @@ namespace AionDPS
                 else
                     userName = logResult.userName;
             }
+            if (logResult.isSpiritWall)
+            {
+                if (logResult.hittedObjectName != "")
+                    userName = logResult.hittedObjectName;
+                else
+                    userName = logResult.userName;
+            }
 
             if (!userList.ContainsKey(userName))
             {
@@ -80,6 +87,13 @@ namespace AionDPS
             if (logResult.isAttackSpd)
             {
                 userLog.attackSpeedCount++;
+                userList[userName] = userLog;
+                userLog.lastLog = logResult;
+                return;
+            }
+            if (logResult.isSpiritWall)
+            {
+                userLog.spiritWallCount++;
                 userList[userName] = userLog;
                 userLog.lastLog = logResult;
                 return;
@@ -113,9 +127,6 @@ namespace AionDPS
                 userLog.rageDamage = logResult.rageDamage;
                 return;
             }
-
-
-            
 
             if (userName.IndexOf(' ') != -1 && skillName.IndexOf(userName) != -1)
                 return;

@@ -40,6 +40,7 @@ namespace AionDPS
             data.Columns.Add("스킬비율", typeof(string));
             data.Columns.Add("신속", typeof(string));
             data.Columns.Add("풍", typeof(string));
+            data.Columns.Add("수장", typeof(string));
             data.Columns.Add("신장변신", typeof(string));
             data.Columns.Add("격노", typeof(bool));
 
@@ -109,6 +110,7 @@ namespace AionDPS
                     item.Value.skillPercentage + "%",
                     item.Value.castSpeedCount + "회",
                     item.Value.attackSpeedCount + "회",
+                    item.Value.spiritWallCount + "회",
                     item.Value.transform,
                     item.Value.rage
                 );
@@ -134,13 +136,14 @@ namespace AionDPS
             dataGridView1.Columns[15].Width = 80;
             dataGridView1.Columns[16].Width = 80;
             dataGridView1.Columns[17].Width = 80;
-            dataGridView1.Columns[18].Width = 80;
-            dataGridView1.Columns[19].Width = 80;
-            dataGridView1.Columns[20].Width = 80;
-            dataGridView1.Columns[21].Width = 0;
+            dataGridView1.Columns[18].Width = 60;
+            dataGridView1.Columns[19].Width = 60;
+            dataGridView1.Columns[20].Width = 60;
+            dataGridView1.Columns[21].Width = 80;
+            dataGridView1.Columns[22].Width = 0;
 
             this.Width = dataGridView1.Columns.GetColumnsWidth(DataGridViewElementStates.Visible) + 50;
-            this.Height = 1000;
+            this.Height = 1100;
 
             dataGridView1.CurrentCell = null;
 
@@ -181,12 +184,6 @@ namespace AionDPS
                 else
                 {
 
-                    this.Width = dataGridView1.Columns.GetColumnsWidth(DataGridViewElementStates.Visible) + 50;
-                    if (1000 > dataGridView1.Rows.GetRowsHeight(DataGridViewElementStates.Visible) + 150)
-                        this.Height = dataGridView1.Rows.GetRowsHeight(DataGridViewElementStates.Visible) + 150;
-                    else
-                        this.Height = 1000;
-
                     dataGridView1.CurrentCell = null;
 
                     data.DefaultView.RowFilter = $"[직업] LIKE '%{btn.Text}%'";
@@ -205,13 +202,20 @@ namespace AionDPS
                         if (Main.form.showMyNick.Checked)
                             if (row.Cells[2].Value.ToString() == Main.form.textBox1.Text)
                                 row.DefaultCellStyle.BackColor = Color.Yellow;
-                        if ((bool)row.Cells[21].Value)
+                        if ((bool)row.Cells[22].Value)
                             row.DefaultCellStyle.BackColor = Color.LightPink;
 
                     }
                 }
 
                 dataGridView1.ClearSelection();
+
+                this.Width = dataGridView1.Columns.GetColumnsWidth(DataGridViewElementStates.Visible) + 50;
+                if (1000 > dataGridView1.Rows.GetRowsHeight(DataGridViewElementStates.Visible) + 150)
+                    this.Height = dataGridView1.Rows.GetRowsHeight(DataGridViewElementStates.Visible) + 150;
+                else
+                    this.Height = 1100;
+
 
                 if (checkBox1.Checked && btn.Text != "전체")
                 {

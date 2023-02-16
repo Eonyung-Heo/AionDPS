@@ -40,12 +40,15 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.serverComboBox = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 26);
+            this.label1.Location = new System.Drawing.Point(12, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 12);
             this.label1.TabIndex = 0;
@@ -54,7 +57,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 61);
+            this.label2.Location = new System.Drawing.Point(12, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 12);
             this.label2.TabIndex = 1;
@@ -63,7 +66,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 93);
+            this.label3.Location = new System.Drawing.Point(12, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 12);
             this.label3.TabIndex = 2;
@@ -73,9 +76,9 @@
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(121, 23);
+            this.textBox1.Location = new System.Drawing.Point(121, 47);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 21);
+            this.textBox1.Size = new System.Drawing.Size(252, 21);
             this.textBox1.TabIndex = 3;
             // 
             // fortressComboBox
@@ -87,10 +90,11 @@
             this.fortressComboBox.Items.AddRange(new object[] {
             "용계",
             "어비스",
-            "심층"});
-            this.fortressComboBox.Location = new System.Drawing.Point(121, 58);
+            "심층",
+            "대행자"});
+            this.fortressComboBox.Location = new System.Drawing.Point(121, 83);
             this.fortressComboBox.Name = "fortressComboBox";
-            this.fortressComboBox.Size = new System.Drawing.Size(200, 20);
+            this.fortressComboBox.Size = new System.Drawing.Size(252, 20);
             this.fortressComboBox.TabIndex = 4;
             this.fortressComboBox.SelectedIndexChanged += new System.EventHandler(this.fortressComboBox_SelectedIndexChanged);
             // 
@@ -100,9 +104,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guardianComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.guardianComboBox.FormattingEnabled = true;
-            this.guardianComboBox.Location = new System.Drawing.Point(121, 93);
+            this.guardianComboBox.Location = new System.Drawing.Point(121, 118);
             this.guardianComboBox.Name = "guardianComboBox";
-            this.guardianComboBox.Size = new System.Drawing.Size(200, 20);
+            this.guardianComboBox.Size = new System.Drawing.Size(252, 20);
             this.guardianComboBox.TabIndex = 5;
             // 
             // button1
@@ -111,9 +115,9 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(0, 200);
+            this.button1.Location = new System.Drawing.Point(0, 233);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(333, 62);
+            this.button1.Size = new System.Drawing.Size(385, 62);
             this.button1.TabIndex = 6;
             this.button1.Text = "집 계";
             this.button1.UseVisualStyleBackColor = false;
@@ -127,7 +131,7 @@
             // showMyNick
             // 
             this.showMyNick.AutoSize = true;
-            this.showMyNick.Location = new System.Drawing.Point(14, 127);
+            this.showMyNick.Location = new System.Drawing.Point(12, 157);
             this.showMyNick.Name = "showMyNick";
             this.showMyNick.Size = new System.Drawing.Size(88, 16);
             this.showMyNick.TabIndex = 7;
@@ -137,17 +141,17 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(14, 149);
+            this.checkBox2.Location = new System.Drawing.Point(12, 179);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(116, 16);
+            this.checkBox2.Size = new System.Drawing.Size(94, 16);
             this.checkBox2.TabIndex = 8;
-            this.checkBox2.Text = "신속의 주문 횟수";
+            this.checkBox2.Text = "신속/풍 횟수";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(14, 171);
+            this.checkBox3.Location = new System.Drawing.Point(12, 201);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(88, 16);
             this.checkBox3.TabIndex = 9;
@@ -156,33 +160,59 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.serverComboBox);
+            this.panel1.Controls.Add(this.guardianComboBox);
+            this.panel1.Controls.Add(this.fortressComboBox);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.checkBox3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.showMyNick);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.checkBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(333, 262);
+            this.panel1.Size = new System.Drawing.Size(385, 295);
             this.panel1.TabIndex = 10;
+            // 
+            // serverComboBox
+            // 
+            this.serverComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.serverComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.serverComboBox.FormattingEnabled = true;
+            this.serverComboBox.Location = new System.Drawing.Point(121, 12);
+            this.serverComboBox.Name = "serverComboBox";
+            this.serverComboBox.Size = new System.Drawing.Size(252, 20);
+            this.serverComboBox.TabIndex = 12;
+            this.serverComboBox.Items.AddRange(new object[] {
+            "이스라펠","바이젤","네자칸","트리니엘","지켈","에레슈렌타","시엘","크로","어비스"
+            });
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 12);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "아이온 서버";
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 262);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.showMyNick);
+            this.ClientSize = new System.Drawing.Size(385, 295);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.guardianComboBox);
-            this.Controls.Add(this.fortressComboBox);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "Main";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Main_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -200,6 +230,8 @@
         public System.Windows.Forms.CheckBox showMyNick;
         public System.Windows.Forms.CheckBox checkBox2;
         public System.Windows.Forms.CheckBox checkBox3;
+        public System.Windows.Forms.ComboBox serverComboBox;
+        private System.Windows.Forms.Label label4;
     }
 }
 

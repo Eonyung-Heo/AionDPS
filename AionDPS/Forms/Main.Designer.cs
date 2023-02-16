@@ -37,7 +37,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.showMyNick = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.serverComboBox = new System.Windows.Forms.ComboBox();
@@ -78,7 +77,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(121, 47);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(252, 21);
+            this.textBox1.Size = new System.Drawing.Size(251, 21);
             this.textBox1.TabIndex = 3;
             // 
             // fortressComboBox
@@ -94,7 +93,7 @@
             "대행자"});
             this.fortressComboBox.Location = new System.Drawing.Point(121, 83);
             this.fortressComboBox.Name = "fortressComboBox";
-            this.fortressComboBox.Size = new System.Drawing.Size(252, 20);
+            this.fortressComboBox.Size = new System.Drawing.Size(251, 20);
             this.fortressComboBox.TabIndex = 4;
             this.fortressComboBox.SelectedIndexChanged += new System.EventHandler(this.fortressComboBox_SelectedIndexChanged);
             // 
@@ -106,7 +105,7 @@
             this.guardianComboBox.FormattingEnabled = true;
             this.guardianComboBox.Location = new System.Drawing.Point(121, 118);
             this.guardianComboBox.Name = "guardianComboBox";
-            this.guardianComboBox.Size = new System.Drawing.Size(252, 20);
+            this.guardianComboBox.Size = new System.Drawing.Size(251, 20);
             this.guardianComboBox.TabIndex = 5;
             // 
             // button1
@@ -115,9 +114,9 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(0, 233);
+            this.button1.Location = new System.Drawing.Point(0, 205);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(385, 62);
+            this.button1.Size = new System.Drawing.Size(384, 62);
             this.button1.TabIndex = 6;
             this.button1.Text = "집 계";
             this.button1.UseVisualStyleBackColor = false;
@@ -138,20 +137,10 @@
             this.showMyNick.Text = "측정자 표시";
             this.showMyNick.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(12, 179);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(94, 16);
-            this.checkBox2.TabIndex = 8;
-            this.checkBox2.Text = "신속/풍 횟수";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(12, 201);
+            this.checkBox3.Location = new System.Drawing.Point(12, 179);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(88, 16);
             this.checkBox3.TabIndex = 9;
@@ -170,11 +159,10 @@
             this.panel1.Controls.Add(this.showMyNick);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.checkBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(385, 295);
+            this.panel1.Size = new System.Drawing.Size(384, 267);
             this.panel1.TabIndex = 10;
             // 
             // serverComboBox
@@ -183,13 +171,20 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.serverComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.serverComboBox.FormattingEnabled = true;
+            this.serverComboBox.Items.AddRange(new object[] {
+            "이스라펠",
+            "바이젤",
+            "네자칸",
+            "트리니엘",
+            "지켈",
+            "에레슈렌타",
+            "시엘",
+            "크로",
+            "어비스"});
             this.serverComboBox.Location = new System.Drawing.Point(121, 12);
             this.serverComboBox.Name = "serverComboBox";
-            this.serverComboBox.Size = new System.Drawing.Size(252, 20);
+            this.serverComboBox.Size = new System.Drawing.Size(251, 20);
             this.serverComboBox.TabIndex = 12;
-            this.serverComboBox.Items.AddRange(new object[] {
-            "이스라펠","바이젤","네자칸","트리니엘","지켈","에레슈렌타","시엘","크로","어비스"
-            });
             // 
             // label4
             // 
@@ -204,7 +199,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(385, 295);
+            this.ClientSize = new System.Drawing.Size(384, 267);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Name = "Main";
@@ -228,7 +223,6 @@
         public System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.CheckBox showMyNick;
-        public System.Windows.Forms.CheckBox checkBox2;
         public System.Windows.Forms.CheckBox checkBox3;
         public System.Windows.Forms.ComboBox serverComboBox;
         private System.Windows.Forms.Label label4;

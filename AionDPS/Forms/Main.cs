@@ -37,7 +37,6 @@ namespace AionDPS
 
             getSettings();
 
-            checkBox2.Checked = true;
             checkBox3.Checked = true;
         }
 

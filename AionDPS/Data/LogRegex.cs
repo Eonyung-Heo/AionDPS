@@ -101,7 +101,7 @@ namespace AionDPS
 
                 analyzed.loggedTime = DateTime.ParseExact(matched.Groups["loggedTime"].Value, "yyyy.MM.dd HH:mm:ss", CultureInfo.InvariantCulture);
             }
-            else if (rx2.IsMatch(log) && Main.form.checkBox2.Checked)
+            else if (rx2.IsMatch(log) )
             {
                 Match matched = rx2.Match(log);
                 string userName = matched.Groups["userName"].Value;
@@ -133,7 +133,7 @@ namespace AionDPS
                 analyzed.transform = "N";
                 return analyzed;
             }
-            else if (rx6.IsMatch(log) && Main.form.checkBox2.Checked)
+            else if (rx6.IsMatch(log) )
             {
                 Match matched = rx6.Match(log);
                 string userName = matched.Groups["userName"].Value;

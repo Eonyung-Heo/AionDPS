@@ -146,6 +146,7 @@ namespace AionDPS
                 userLog.MaxDamage = userLog.MaxDamage < logResult.damage ? logResult.damage : userLog.MaxDamage;
                 userLog.atkAccDamage += logResult.skillName == "" ? logResult.damage : 0;
                 userLog.skillAccDamage += logResult.skillName != "" ? logResult.damage : 0;
+               
 
                 if (logResult.skillName != null && userLog.userClass == "")
                     userLog.userClass = getUserClass(userLog, logResult);
@@ -201,6 +202,8 @@ namespace AionDPS
 
         public void GetNewAtk(Log userLog, Analyzed logResult)
         {
+
+            bool atkCheck = true;
             int tSpan = (int)(logResult.loggedTime - userLog.lastLoggedTime).TotalSeconds;
             userLog.totalDealCount++;
             if (userLog.newAtk == 0)
@@ -218,7 +221,7 @@ namespace AionDPS
                     userLog.skillTimes++;
                     userLog.currentAtkCancel = 0;
                 }
-                else if ((userLog.lastLog.skillName == "" && logResult.skillName != "") || (userLog.lastLog.skillName != "" && logResult.skillName == ""))
+                else if ((userLog.lastLog.skillName == "" && logResult.skillName != ""))
                 {
                     userLog.newAtk++;
                     if (tSpan <= 3)
@@ -230,17 +233,69 @@ namespace AionDPS
                     {
                         userLog.currentAtkCancel = 0;
                     }
-                    if (logResult.skillName == "") userLog.atkTimes++;
-                    else userLog.skillTimes++;
+                    userLog.atkCount = 0;
+                    userLog.skillTimes++;
+                }
+                else if((userLog.lastLog.skillName != "" && logResult.skillName == ""))
+                {
+                    userLog.newAtk++;
+                    if (tSpan <= 3)
+                    {
+                        userLog.currentAtkCancel++;
+                        userLog.totalAtkCancel++;
+                    }
+                    else
+                    {
+                        userLog.currentAtkCancel = 0;
+                    }
+
+                    userLog.atkCount = 0;
+                    userLog.atkTimes++;
+
+
+                    userLog.lastDamage = logResult.damage;
+
                 }
                 else if (userLog.lastLog.skillName == "" && logResult.skillName == "")
                 {
                     if ((logResult.loggedTime - userLog.lastLog.loggedTime).TotalSeconds > 0)
                     {
+
                         userLog.newAtk++;
                         userLog.atkTimes++;
-                        userLog.currentAtkCancel = 0;
+                        userLog.currentAtkCancel++;
+                        userLog.totalAtkCancel++;
+                        userLog.atkCount = 0;
+                        userLog.lastDamage = logResult.damage;
+                        
                     }
+                    /*else if ((logResult.loggedTime - userLog.lastLog.loggedTime).TotalSeconds == 0)
+                    {
+                        if (userLog.atkCount > 2)
+                        {
+
+                            if (userLog.lastLog.damage != logResult.damage)
+                            {
+                                int damage4 = userLog.lastDamage - (logResult.damage * 10);
+
+                                if (damage4 > 9 || damage4 < -1000)
+                                {
+                                    userLog.newAtk++;
+                                    userLog.atkTimes++;
+                                    userLog.atkCount = 0;
+                                }
+
+                            }
+                                                     
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                        }
+                        else
+                        {
+
+                            userLog.atkCount++;
+                        }
+
+                    }*/
                 }
             }
 
@@ -248,6 +303,8 @@ namespace AionDPS
                 userLog.maxContinuousAtkCancel = userLog.currentAtkCancel;
 
             userLog.atkCancelPercentage = userLog.newAtk != 0 ? (int)((float)userLog.totalAtkCancel * 100 / (float)(userLog.newAtk - 1)) : 0;
+
+       
         }
 
         private string getUserClass(Log userLog, Analyzed logResult)

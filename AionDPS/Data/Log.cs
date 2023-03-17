@@ -18,6 +18,8 @@ namespace AionDPS
         public int skillCriticalTimes = 0;
         public int criticalTimes = 0;
         public int newAtk = 0;
+        public int atkCount = 0;
+        public int lastDamage = 0;
         public int avgAtkDamage = 0;
         public int avgSkillDamage = 0;
         public int MaxDamage = 0;

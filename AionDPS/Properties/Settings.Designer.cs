@@ -250,5 +250,19 @@ namespace AionDPS.Properties
                 this["집행자"] = value;
             }
         }
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public string 권성
+        {
+            get
+            {
+                return ((string)(this["권성"]));
+            }
+            set
+            {
+                this["권성"] = value;
+            }
+        }
     }
 }

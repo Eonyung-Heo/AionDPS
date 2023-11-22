@@ -50,35 +50,21 @@ namespace AionDPS
                 guardianComboBox.Items.Add("마족 수호신장");
                 guardianComboBox.Items.Add("용족 수호신장");
             }
-            else if (fortressComboBox.Text == "어비스")
+            else if (fortressComboBox.Text == "아페타")
             {
-                guardianComboBox.Items.Add("천족 중급 수호신장");
-                guardianComboBox.Items.Add("천족 상급 수호신장");
-                guardianComboBox.Items.Add("마족 중급 수호신장");
-                guardianComboBox.Items.Add("마족 상급 수호신장");
-                guardianComboBox.Items.Add("용족 중급 수호신장");
-                guardianComboBox.Items.Add("용족 상급 수호신장");
+                guardianComboBox.Items.Add("용족 수호신장");
             }
-            else if (fortressComboBox.Text == "심층")
+            else if (fortressComboBox.Text == "라프스란")
             {
-                guardianComboBox.Items.Add("에레슈키갈 제1 수호신장");
+                guardianComboBox.Items.Add("지하 군주");
             }
-            else if (fortressComboBox.Text == "대행자")
-            {
-                guardianComboBox.Items.Add("분노한 테그라크");
-                guardianComboBox.Items.Add("분노한 헤라나스");
-            }
+
 
             guardianComboBox.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (serverComboBox.Text == "")
-            {
-                MessageBox.Show("아이온 서버 선택 해주세요");
-                return;
-            }
 
             if (guardianComboBox.Text == "")
             {

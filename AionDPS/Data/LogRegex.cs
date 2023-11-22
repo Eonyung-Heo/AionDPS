@@ -39,54 +39,19 @@ namespace AionDPS
             불의 정령이 명령: 수호의 장벽 IV 불을 사용해 순진이 물리 공격력 강화 상태가 됐습니다. 
              */
 
+            Regex rx = new Regex(loggedTimestamp + @"(?<isCritical>치명타! )?((?<userName>[가-힣A-Za-z-\s]+)(가|이) )?((?<skillName>[가-힣\s]+ ?(I)?(I)?(V)?(I)?(I)?)(을|를) 사용해 )?" + $@"(?<hittedObjectName>{hittedObjectName})" + @"(에게|이) (?<damage>[0-9,]+)의 (치명적인 )?대미지를 (받고|받았|줬습|주고)");
+            Regex rx2 = new Regex(loggedTimestamp + @"((?<userName>[가-힣A-Za-z-\s]+)(가|이) )?(사용한 )?신속의 주문 I((을|를) 사용해|의 영향으로) ((?<targetName>[가-힣A-Za-z]+)의 )?시전속도(가|를) (변동됐습니다|변경했습니다)");
+            Regex rx6 = new Regex(loggedTimestamp + @"((?<userName>[가-힣A-Za-z-\s]+)(가|이) )?(사용한 )?질풍의 주문 I((을|를) 사용해|의 영향으로) ((?<targetName>[가-힣A-Za-z]+)(가|이) )?이동속도 강화 (상태|효과)가 (발생했습니다|됐습니다)");
+            Regex rx7 = new Regex(loggedTimestamp + @"((불)?(용암)?의 정령이 명령:) 수호의 장벽 (I)?(I)?(V)?(I)?(I)? (불)?(용암)?(을|를) 사용해 ((?<targetName>[가-힣A-Za-z]+)(가|이) )?(물리 공격력 강화) (상태|효과)가 (발생했습니다|됐습니다)");
 
-            Regex rx = new Regex(loggedTimestamp + @"(?<isCritical>치명타! )?((?<userName>[가-힣A-Za-z\s]+)(가|이) )?((?<skillName>[가-힣\s]+ (I)?(I)?(V)?(I)?(I)?)을 사용해 )?" + $@"(?<hittedObjectName>{hittedObjectName})" + @"(에게|이) (?<damage>[0-9,]+)의 (치명적인 )?대미지를 (받고|받았|줬습|주고)");
-            Regex rx2 = new Regex(loggedTimestamp + @"((?<userName>[가-힣A-Za-z]+)(가|이) )?(사용한 )?신속의 주문 I(을 사용해|의 영향으로) ((?<targetName>[가-힣A-Za-z]+)의 )?시전속도(가|를) (변동됐습니다|변경했습니다)");
-            Regex rx6 = new Regex(loggedTimestamp + @"((?<userName>[가-힣A-Za-z]+)(가|이) )?(사용한 )?질풍의 주문 I(을 사용해|의 영향으로) ((?<targetName>[가-힣A-Za-z]+)(가|이) )?이동속도 강화 (상태|효과)가 (발생했습니다|됐습니다)");
-            Regex rx7 = new Regex(loggedTimestamp + @"(불의 정령이 명령:) 수호의 장벽 (I)?(I)?(V)?(I)?(I)? 불을 사용해 ((?<targetName>[가-힣A-Za-z]+)(가|이) )?(물리 공격력 강화) (상태|효과)가 (발생했습니다|됐습니다)");
-
-            Regex rx3 = new Regex(loggedTimestamp + $@"{hittedObjectName}이 (사용한 )?신장의 (격노|분노)(를 사용해|의 영향으로) ((?<targetName>[가-힣A-Za-z]+)에게 )?(?<damage>[0-9,]+)의 대미지를 (줬습니다|받았습니다).");
-            Regex rx4 = new Regex(loggedTimestamp + @"(?<isCritical>치명타! )?((?<userName>[가-힣A-Za-z\s]+)(가|이) )?((심연의 (폭풍|기운|반사막|파동|해일)+ (I)?(I)?(V)?(I)?(I)?)을 사용해 )" + $@"(?<hittedObjectName>{hittedObjectName})" + @"(에게|이) (?<damage>[0-9,]+)의 (치명적인 )?대미지를 (받고|받았|줬습|주고)");
-            Regex rx5 = new Regex(loggedTimestamp + @"((?<userName>[가-힣A-Za-z\s]+)(가|이) )?(변신: 수호신장 (I)?(I)?(V)?(I)?(I)?을 사용해 아바타 (천족|마족)으로 변신했습니다).");
+            Regex rx3 = new Regex(loggedTimestamp + $@"{hittedObjectName}이 (사용한 )?신장의 (격노|분노)((을|를) 사용해|의 영향으로) ((?<targetName>[가-힣A-Za-z]+)에게 )?(?<damage>[0-9,]+)의 대미지를 (줬습니다|받았습니다).");
+            Regex rx4 = new Regex(loggedTimestamp + @"(?<isCritical>치명타! )?((?<userName>[가-힣A-Za-z-\s]+)(가|이) )?((심연의 (폭풍|기운|반사막|파동|해일)+ (I)?(I)?(V)?(I)?(I)?)(을|를) 사용해 )" + $@"(?<hittedObjectName>{hittedObjectName})" + @"(에게|이) (?<damage>[0-9,]+)의 (치명적인 )?대미지를 (받고|받았|줬습|주고)");
+            Regex rx5 = new Regex(loggedTimestamp + @"((?<userName>[가-힣A-Za-z-\s]+)(가|이) )?(변신: 수호신장 (I)?(I)?(V)?(I)?(I)?(을|를) 사용해 아바타 (천족|마족)으로 변신했습니다).");
 
             Analyzed analyzed = new Analyzed();
 
 
-            if ((Main.form.fortressComboBox.Text == "어비스"))
-                serverStartHour = 19;
-            else
-                serverStartHour = 22;
 
-            if (Main.form.serverComboBox.Text == "트리니엘" || Main.form.serverComboBox.Text == "시엘" || Main.form.serverComboBox.Text == "어비스")
-            {
-                serverStartHour = serverStartHour - 1;
-                serverStartMin = 55;
-                serverEndMin = 10;
-            }
-            else if(Main.form.serverComboBox.Text == "이스라펠")
-            {
-                serverStartMin = 0;
-                serverEndMin = 15;
-            }
-            else if(Main.form.serverComboBox.Text == "네자칸" || Main.form.serverComboBox.Text == "크로")
-            {
-                serverStartMin = 5;
-                serverEndMin = 20;
-            }
-            else if(Main.form.serverComboBox.Text == "지켈")
-            {
-                serverStartMin = 10;
-                serverEndMin = 25;
-            }
-            else if(Main.form.serverComboBox.Text == "바이젤" || Main.form.serverComboBox.Text == "에레슈렌타")
-            {
-                serverStartMin = 15;
-                serverEndMin = 30;
-            }
-
-
-            
-            
             if (rx3.IsMatch(log) && Main.form.checkBox3.Checked)
             {
                 Match matched = rx3.Match(log);
@@ -234,6 +199,7 @@ namespace AionDPS
 
                 string userName = matched.Groups["userName"].Value;
                 string skillName = matched.Groups["skillName"].Value;
+
                 if (userName == "")
                     userName = Main.form.textBox1.Text;
                 else if (userName.IndexOf("의 정령") != -1 || userName.IndexOf("의 기운") != -1)
@@ -244,6 +210,7 @@ namespace AionDPS
                     userName = null;
                 else if ((userName.IndexOf(" ")) != -1)
                     userName = null;
+
 
                 analyzed.loggedTime = DateTime.ParseExact(matched.Groups["loggedTime"].Value, "yyyy.MM.dd HH:mm:ss", CultureInfo.InvariantCulture);
                 analyzed.userName = userName;

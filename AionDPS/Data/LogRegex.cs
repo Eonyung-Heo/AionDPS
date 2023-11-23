@@ -40,11 +40,11 @@ namespace AionDPS
              */
 
             Regex rx = new Regex(loggedTimestamp + @"(?<isCritical>치명타! )?((?<userName>[가-힣A-Za-z-\s]+)(가|이) )?((?<skillName>[가-힣\s]+ ?(I)?(I)?(V)?(I)?(I)?)(을|를) 사용해 )?" + $@"(?<hittedObjectName>{hittedObjectName})" + @"(에게|이) (?<damage>[0-9,]+)의 (치명적인 )?대미지를 (받고|받았|줬습|주고)");
-            Regex rx2 = new Regex(loggedTimestamp + @"((?<userName>[가-힣A-Za-z-\s]+)(가|이) )?(사용한 )?신속의 주문 I((을|를) 사용해|의 영향으로) ((?<targetName>[가-힣A-Za-z]+)의 )?시전속도(가|를) (변동됐습니다|변경했습니다)");
-            Regex rx6 = new Regex(loggedTimestamp + @"((?<userName>[가-힣A-Za-z-\s]+)(가|이) )?(사용한 )?질풍의 주문 I((을|를) 사용해|의 영향으로) ((?<targetName>[가-힣A-Za-z]+)(가|이) )?이동속도 강화 (상태|효과)가 (발생했습니다|됐습니다)");
-            Regex rx7 = new Regex(loggedTimestamp + @"((불)?(용암)?의 정령이 명령:) 수호의 장벽 (I)?(I)?(V)?(I)?(I)? (불)?(용암)?(을|를) 사용해 ((?<targetName>[가-힣A-Za-z]+)(가|이) )?(물리 공격력 강화) (상태|효과)가 (발생했습니다|됐습니다)");
+            Regex rx2 = new Regex(loggedTimestamp + @"((?<userName>[가-힣A-Za-z-\s]+)(가|이) )?(사용한 )?신속의 주문 I((을|를) 사용해|의 영향으로) ((?<targetName>[가-힣A-Za-z-]+)의 )?시전속도(가|를) (변동됐습니다|변경했습니다)");
+            Regex rx6 = new Regex(loggedTimestamp + @"((?<userName>[가-힣A-Za-z-\s]+)(가|이) )?(사용한 )?질풍의 주문 I((을|를) 사용해|의 영향으로) ((?<targetName>[가-힣A-Za-z-]+)(가|이) )?이동속도 강화 (상태|효과)가 (발생했습니다|됐습니다)");
+            Regex rx7 = new Regex(loggedTimestamp + @"((불)?(용암)?의 정령이 명령:) 수호의 장벽 (I)?(I)?(V)?(I)?(I)? (불)?(용암)?(을|를) 사용해 ((?<targetName>[가-힣A-Za-z-]+)(가|이) )?(물리 공격력 강화) (상태|효과)가 (발생했습니다|됐습니다)");
 
-            Regex rx3 = new Regex(loggedTimestamp + $@"{hittedObjectName}이 (사용한 )?신장의 (격노|분노)((을|를) 사용해|의 영향으로) ((?<targetName>[가-힣A-Za-z]+)에게 )?(?<damage>[0-9,]+)의 대미지를 (줬습니다|받았습니다).");
+            Regex rx3 = new Regex(loggedTimestamp + $@"{hittedObjectName}이 (사용한 )?신장의 (격노|분노)((을|를) 사용해|의 영향으로) ((?<targetName>[가-힣A-Za-z-]+)에게 )?(?<damage>[0-9,]+)의 대미지를 (줬습니다|받았습니다).");
             Regex rx4 = new Regex(loggedTimestamp + @"(?<isCritical>치명타! )?((?<userName>[가-힣A-Za-z-\s]+)(가|이) )?((심연의 (폭풍|기운|반사막|파동|해일)+ (I)?(I)?(V)?(I)?(I)?)(을|를) 사용해 )" + $@"(?<hittedObjectName>{hittedObjectName})" + @"(에게|이) (?<damage>[0-9,]+)의 (치명적인 )?대미지를 (받고|받았|줬습|주고)");
             Regex rx5 = new Regex(loggedTimestamp + @"((?<userName>[가-힣A-Za-z-\s]+)(가|이) )?(변신: 수호신장 (I)?(I)?(V)?(I)?(I)?(을|를) 사용해 아바타 (천족|마족)으로 변신했습니다).");
 

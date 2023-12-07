@@ -209,6 +209,7 @@ namespace AionDPS
             if (userLog.newAtk == 0)
             {
                 userLog.newAtk++;
+                userLog.lastDamage = logResult.damage;
                 if (logResult.skillName != "") userLog.skillTimes++;
                 else userLog.atkTimes++;
             }
@@ -269,33 +270,34 @@ namespace AionDPS
                         userLog.lastDamage = logResult.damage;
                         
                     }
-                    /*else if ((logResult.loggedTime - userLog.lastLog.loggedTime).TotalSeconds == 0)
+                    else if ((logResult.loggedTime - userLog.lastLog.loggedTime).TotalSeconds == 0)
                     {
-                        if (userLog.atkCount > 2)
+
+                        int damage = (userLog.lastDamage * 20) / 100;
+
+                        if (logResult.damage > damage)
                         {
 
-                            if (userLog.lastLog.damage != logResult.damage)
+                            if (userLog.atkCount > 0)
                             {
-                                int damage4 = userLog.lastDamage - (logResult.damage * 10);
 
-                                if (damage4 > 9 || damage4 < -1000)
-                                {
-                                    userLog.newAtk++;
-                                    userLog.atkTimes++;
-                                    userLog.atkCount = 0;
-                                }
+                                userLog.newAtk++;
+                                userLog.atkTimes++;
+                                userLog.currentAtkCancel++;
+                                userLog.totalAtkCancel++;
+                                userLog.atkCount = 0;
+                                userLog.lastDamage = logResult.damage;
+
 
                             }
-                                                     
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
-                        }
-                        else
-                        {
-
-                            userLog.atkCount++;
+                            else
+                            {
+                                userLog.atkCount++;
+                                userLog.lastDamage = logResult.damage;
+                            }
                         }
 
-                    }*/
+                    }
                 }
             }
 
